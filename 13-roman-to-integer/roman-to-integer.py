@@ -17,4 +17,4 @@ class Solution:
                 result += roman_dict[s[index]]
         return result
 obj = Solution()
-print(obj.romanToInt('XXX'))
+print(obj.romanToInt('MX'))
