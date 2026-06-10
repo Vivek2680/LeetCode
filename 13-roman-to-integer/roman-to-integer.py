@@ -11,12 +11,10 @@ class Solution:
             'M' : 1000
         }
         for index in range(len(s)):
-            current = roman_dict[s[index]]
-            if index + 1 < len(s) and current < roman_dict[s[index + 1]]:
-                result -= current
+            if index + 1 < len(s) and roman_dict[s[index]] < roman_dict[s[index + 1]]:
+                result -= roman_dict[s[index]]
             else:
-                result += current
-
+                result += roman_dict[s[index]]
         return result
 obj = Solution()
 print(obj.romanToInt('XXX'))
