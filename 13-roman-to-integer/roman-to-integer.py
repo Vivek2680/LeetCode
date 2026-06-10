@@ -11,7 +11,7 @@ class Solution:
             'M' : 1000
         }
         for index in range(len(s)):
-            if index + 1 < len(s) and roman_dict[s[index]] < roman_dict[s[index + 1]]:
+            if index < len(s)-1 and roman_dict[s[index]] < roman_dict[s[index + 1]]:
                 result -= roman_dict[s[index]]
             else:
                 result += roman_dict[s[index]]
